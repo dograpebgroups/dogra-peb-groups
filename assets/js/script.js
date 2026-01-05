@@ -101,7 +101,7 @@
                 description: 'Fabrication of 8 stainless steel tanks for modern dairy processing.',
                 size: '8 tanks (60,000L)',
                 duration: '6 weeks',
-                image: 'https://images.unsplash.com/photo-1579113800032-c38bd7635818?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                image: '',
                 tags: ['SS Tanks', 'Dairy', 'Food-Grade']
             }
         ];
@@ -116,7 +116,7 @@
                 caption: 'Modern Prefab House'
             },
             {
-                image: 'https://images.unsplash.com/photo-1579113800032-c38bd7635818?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                image: '',
                 caption: 'SS Tank Fabrication'
             },
             {
