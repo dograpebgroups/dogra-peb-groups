@@ -38,22 +38,24 @@
     <header id="header">
         <div class="container header-container">
             <div class="logo">
-                <img src="../assets/imgs/logo.png" class="logo-icon">
+                <a href="../index.html">
+                    <img src="../assets/imgs/logo.png" class="logo-icon">
+                </a>
                 <div class="logo-text">Dogra <span>PEB</span> Groups</div>
             </div>
 
             <nav class="nav-desktop">
                 <ul class="nav-list">
-                    <li><a href="#home" class="nav-link active">Home</a></li>
-                    <li><a href="#services" class="nav-link">Services</a></li>
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
-                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
-                    <li><a href="#faq" class="nav-link">FAQ</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="../services/index.html" class="nav-link">Services</a></li>
+                    <li><a href="../projects/index.html" class="nav-link active">Projects</a></li>
+                    <li><a href="../gallery/index.html" class="nav-link">Gallery</a></li>
+                    <li><a href="../about-us/index.html" class="nav-link">About</a></li>
+                    <li><a href="../contact-us/index.html" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
 
-            <a href="#contact" class="btn btn-primary header-cta">
+            <a href="../contact-us/index.html" class="btn btn-primary header-cta">
                 <i class="fas fa-phone-alt"></i> Get Quote
             </a>
 
@@ -66,13 +68,13 @@
 
         <nav class="nav-mobile" id="navMobile">
             <ul class="nav-list">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#gallery" class="nav-link">Gallery</a></li>
-                <li><a href="#faq" class="nav-link">FAQ</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li><a href="#contact" class="btn btn-primary" style="margin-top: 1rem;">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../services/index.html" class="nav-link">Services</a></li>
+                <li><a href="../projects/index.html" class="nav-link active">Projects</a></li>
+                <li><a href="../gallery/index.html" class="nav-link">Gallery</a></li>
+                <li><a href="../about-us/index.html" class="nav-link">About</a></li>
+                <li><a href="../contact-us/index.html" class="nav-link">Contact</a></li>
+                <li><a href="../contact-us/index.html" class="btn btn-primary" style="margin-top: 1rem;">
                         <i class="fas fa-phone-alt"></i> Get Quote
                     </a></li>
             </ul>
@@ -82,48 +84,325 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section id="home" class="hero contact">
         <div class="hero-bg">
-            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
-                alt="Industrial Construction">
+            <img src="../assets/imgs/banners/projects.png">
         </div>
         <div class="container">
             <div class="hero-content">
-                <h1>Building Excellence With Precision & Innovation</h1>
-                <p>Dogra PEB Groups delivers superior Pre-Engineered Building solutions, prefabricated houses,
-                    industrial tanks, and recreational infrastructure across India with 12+ years of trusted expertise.
+                <h1>Our Projects, Delivered with 100% Commitment to Quality</h1>
+                <p>
+                    Delivering high-quality PEB construction, prefab buildings, and steel fabrication projects across India
                 </p>
                 <div class="hero-btns">
-                    <a href="#contact" class="btn btn-primary">
-                        <i class="fas fa-calendar-alt"></i> Request Consultation
+                    <a href="../contact-us/index.html" class="btn btn-primary">
+                        <i class="fas fa-calendar-alt"></i> Request a Quote
                     </a>
-                    <a href="#projects" class="btn btn-outline">
-                        <i class="fas fa-hard-hat"></i> View Our Work
+                    <a href="../gallery/index.html" class="btn btn-outline">
+                        <i class="fas fa-images"></i> View Gallery
                     </a>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <div class="stat-number" data-count="350">0</div>
-                        <div class="stat-label">Projects Completed</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" data-count="12">0</div>
-                        <div class="stat-label">Years Experience</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" data-count="28">0</div>
-                        <div class="stat-label">Cities Across India</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" data-count="98">0</div>
-                        <div class="stat-label">Client Satisfaction</div>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <h1>HII WE ARE HITTING SOON CONTACT-US PAGE....</h1>
+    <!-- Project Section -->
+    <section id="projects" class="section" style="background: #262c3514;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <p>
+                    A glimpse of our work across industrial construction, prefabricated structures,
+                    and steel fabrication solutions.
+                </p>
+            </div>
+
+            <div class="projects-grid" id="projectsGrid">
+
+                <!-- Project 1 -->
+                <div class="project-card fade-in" data-id="1">
+                    <div class="project-image">
+                        <img src="../assets/imgs/projects/project-warehouse.png"
+                            alt="Industrial PEB Warehouse" loading="lazy">
+                        <div class="project-overlay">
+                            <div class="gallery-caption">
+                                <p style="font-weight: 500;">Industrial PEB Warehouse</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Industrial PEB Warehouse</h3>
+                        <p style="color: var(--color-text-light); font-size: 0.875rem;">
+                            <i class="fas fa-map-marker-alt"></i> Himachal Pradesh
+                        </p>
+                        <p style="margin: 0.75rem 0;">
+                            Pre-engineered steel warehouse designed for fast erection,
+                            durability, and efficient industrial operations.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">PEB</span>
+                            <span class="project-tag">Warehouse</span>
+                            <span class="project-tag">Industrial</span>
+                        </div>
+                        <a href="../projects/index.html#projectID" class="btn btn-outline" style="margin-top: 1rem;">
+                            <i class="fas fa-arrow-right"></i> View Project
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card fade-in" data-id="2">
+                    <div class="project-image">
+                        <img src="../assets/imgs/projects/project-prefabricated.png"
+                            alt="Prefabricated Resort Cottages" loading="lazy">
+                        <div class="project-overlay">
+                            <div class="gallery-caption">
+                                <p style="font-weight: 500;">Prefabricated Resort Cottages</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Prefabricated Resort Cottages</h3>
+                        <p style="color: var(--color-text-light); font-size: 0.875rem;">
+                            <i class="fas fa-map-marker-alt"></i> North India
+                        </p>
+                        <p style="margin: 0.75rem 0;">
+                            Modular prefab cottages manufactured off-site and assembled
+                            quickly for hospitality and resort applications.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Prefab</span>
+                            <span class="project-tag">Resort</span>
+                            <span class="project-tag">Modular</span>
+                        </div>
+                        <a href="../projects/index.html#projectID" class="btn btn-outline" style="margin-top: 1rem;">
+                            <i class="fas fa-arrow-right"></i> View Project
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card fade-in" data-id="3">
+                    <div class="project-image">
+                        <img src="../assets/imgs/projects/project-tanks.png"
+                            alt="Prefabricated Resort Cottages" loading="lazy">
+                        <div class="project-overlay">
+                            <div class="gallery-caption">
+                                <p style="font-weight: 500;">MS & SS Storage Tanks</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>MS & SS Storage Tanks</h3>
+                        <p style="color: var(--color-text-light); font-size: 0.875rem;">
+                            <i class="fas fa-map-marker-alt"></i> Industrial Installations
+                        </p>
+                        <p style="margin: 0.75rem 0;">
+                            Custom-fabricated mild steel and stainless steel tanks for
+                            water, chemical, and food-grade storage requirements.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">MS Tanks</span>
+                            <span class="project-tag">SS Tanks</span>
+                            <span class="project-tag">Fabrication</span>
+                        </div>
+                        <a href="../projects/index.html" class="btn btn-outline" style="margin-top: 1rem;">
+                            <i class="fas fa-arrow-right"></i> View Project
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card fade-in" data-id="4">
+                    <div class="project-image">
+                        <img src="../assets/imgs/projects/project-factory-shed.png"
+                            alt="Industrial Factory Shed PEB" loading="lazy">
+                        <div class="project-overlay">
+                            <div class="gallery-caption">
+                                <p style="font-weight: 500;">Industrial Factory Shed</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Industrial Factory Shed</h3>
+                        <p style="color: var(--color-text-light); font-size: 0.875rem;">
+                            <i class="fas fa-map-marker-alt"></i> Northern India
+                        </p>
+                        <p style="margin: 0.75rem 0;">
+                            Pre-engineered factory shed designed for manufacturing operations,
+                            offering strength, flexibility, and quick installation.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">PEB</span>
+                            <span class="project-tag">Factory</span>
+                            <span class="project-tag">Industrial</span>
+                        </div>
+                        <a href="../projects/index.html#project-4" class="btn btn-outline" style="margin-top: 1rem;">
+                            <i class="fas fa-arrow-right"></i> View Project
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card fade-in" data-id="5">
+                    <div class="project-image">
+                        <img src="../assets/imgs/projects/project-staff-quarters.png"
+                            alt="Prefabricated Staff Quarters" loading="lazy">
+                        <div class="project-overlay">
+                            <div class="gallery-caption">
+                                <p style="font-weight: 500;">Prefabricated Staff Quarters</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Prefabricated Staff Quarters</h3>
+                        <p style="color: var(--color-text-light); font-size: 0.875rem;">
+                            <i class="fas fa-map-marker-alt"></i> Himachal Pradesh
+                        </p>
+                        <p style="margin: 0.75rem 0;">
+                            Modular housing units developed for staff accommodation,
+                            ensuring fast delivery, durability, and cost efficiency.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Prefab</span>
+                            <span class="project-tag">Residential</span>
+                            <span class="project-tag">Staff Housing</span>
+                        </div>
+                        <a href="../projects/index.html#project-5" class="btn btn-outline" style="margin-top: 1rem;">
+                            <i class="fas fa-arrow-right"></i> View Project
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card fade-in" data-id="6">
+                    <div class="project-image">
+                        <img src="../assets/imgs/projects/project-open-gym.png"
+                            alt="Open Gym Equipment Installation" loading="lazy">
+                        <div class="project-overlay">
+                            <div class="gallery-caption">
+                                <p style="font-weight: 500;">Open Gym Installation</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Open Gym Equipment Installation</h3>
+                        <p style="color: var(--color-text-light); font-size: 0.875rem;">
+                            <i class="fas fa-map-marker-alt"></i> Community Park
+                        </p>
+                        <p style="margin: 0.75rem 0;">
+                            Installation of outdoor fitness equipment designed for public use,
+                            promoting health and wellness in open community spaces.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Open Gym</span>
+                            <span class="project-tag">Outdoor</span>
+                            <span class="project-tag">Public</span>
+                        </div>
+                        <a href="../projects/index.html#project-6" class="btn btn-outline" style="margin-top: 1rem;">
+                            <i class="fas fa-arrow-right"></i> View Project
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="project-card fade-in" data-id="7">
+                    <div class="project-image">
+                        <img src="../assets/imgs/projects/project-playway.png"
+                            alt="Playway Equipment Installation" loading="lazy">
+                        <div class="project-overlay">
+                            <div class="gallery-caption">
+                                <p style="font-weight: 500;">Playway Equipment Installation</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Playway Equipment Installation</h3>
+                        <p style="color: var(--color-text-light); font-size: 0.875rem;">
+                            <i class="fas fa-map-marker-alt"></i> Educational Campus
+                        </p>
+                        <p style="margin: 0.75rem 0;">
+                            Supply and installation of child-safe playway equipment designed to support
+                            physical activity, learning, and social interaction.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Playway</span>
+                            <span class="project-tag">Playground</span>
+                            <span class="project-tag">Safety</span>
+                        </div>
+                        <a href="../projects/index.html#project-7" class="btn btn-outline" style="margin-top: 1rem;">
+                            <i class="fas fa-arrow-right"></i> View Project
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="project-card fade-in" data-id="8">
+                    <div class="project-image">
+                        <img src="../assets/imgs/projects/project-commercial-prefab.png"
+                            alt="Commercial Prefabricated Building" loading="lazy">
+                        <div class="project-overlay">
+                            <div class="gallery-caption">
+                                <p style="font-weight: 500;">Commercial Prefab Building</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Commercial Prefabricated Building</h3>
+                        <p style="color: var(--color-text-light); font-size: 0.875rem;">
+                            <i class="fas fa-map-marker-alt"></i> Semi-Urban Location
+                        </p>
+                        <p style="margin: 0.75rem 0;">
+                            Prefabricated commercial structure developed for quick deployment,
+                            offering durability, flexibility, and efficient space utilization.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Prefab</span>
+                            <span class="project-tag">Commercial</span>
+                            <span class="project-tag">Modular</span>
+                        </div>
+                        <a href="../projects/index.html#project-8" class="btn btn-outline" style="margin-top: 1rem;">
+                            <i class="fas fa-arrow-right"></i> View Project
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 9 -->
+                <div class="project-card fade-in" data-id="9">
+                    <div class="project-image">
+                        <img src="../assets/imgs/projects/project-water-tank.png"
+                            alt="Industrial Water Storage Tank" loading="lazy">
+                        <div class="project-overlay">
+                            <div class="gallery-caption">
+                                <p style="font-weight: 500;">Industrial Water Storage Tank</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Industrial Water Storage Tank</h3>
+                        <p style="color: var(--color-text-light); font-size: 0.875rem;">
+                            <i class="fas fa-map-marker-alt"></i> Industrial Area
+                        </p>
+                        <p style="margin: 0.75rem 0;">
+                            Mild steel water storage tank fabricated and installed for industrial use,
+                            designed for strength, durability, and long-term performance.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">MS Tank</span>
+                            <span class="project-tag">Storage</span>
+                            <span class="project-tag">Industrial</span>
+                        </div>
+                        <a href="../projects/index.html#project-9" class="btn btn-outline" style="margin-top: 1rem;">
+                            <i class="fas fa-arrow-right"></i> View Project
+                        </a>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -134,16 +413,16 @@
                     <p>Leading provider of Pre-Engineered Building solutions, prefabricated houses, industrial tanks,
                         and recreational infrastructure across India.</p>
                     <div class="footer-social">
-                        <a href="#" class="social-icon" aria-label="Facebook">
+                        <a href="../#" class="social-icon" aria-label="Facebook">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="social-icon" aria-label="Instagram">
+                        <a href="../#" class="social-icon" aria-label="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="social-icon" aria-label="LinkedIn">
+                        <a href="../#" class="social-icon" aria-label="LinkedIn">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="#" class="social-icon" aria-label="YouTube">
+                        <a href="../#" class="social-icon" aria-label="YouTube">
                             <i class="fab fa-youtube"></i>
                         </a>
                     </div>
@@ -152,24 +431,24 @@
                 <div>
                     <h3 class="footer-heading">Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../services/index.html">Services</a></li>
+                        <li><a href="../projects/index.html">Projects</a></li>
+                        <li><a href="../gallery/index.html">Gallery</a></li>
+                        <li><a href="../about-us/index.html">About</a></li>
+                        <li><a href="../contact-us/">Contact</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h3 class="footer-heading">Our Services</h3>
                     <ul class="footer-links">
-                        <li><a href="#services">PEB Construction</a></li>
-                        <li><a href="#services">Prefab Houses</a></li>
-                        <li><a href="#services">MS/SS Tanks</a></li>
-                        <li><a href="#services">Playway Equipment</a></li>
-                        <li><a href="#services">Open Gym Equipment</a></li>
-                        <li><a href="#services">Industrial Insulation</a></li>
+                        <li><a href="../services/index.html">PEB Construction</a></li>
+                        <li><a href="../services/index.html">Prefab Houses</a></li>
+                        <li><a href="../services/index.html">MS/SS Tanks</a></li>
+                        <li><a href="../services/index.html">Playway Equipment</a></li>
+                        <li><a href="../services/index.html">Open Gym Equipment</a></li>
+                        <li><a href="../services/index.html">Industrial Insulation</a></li>
                     </ul>
                 </div>
 
@@ -191,32 +470,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Project Modal -->
-    <div class="modal" id="projectModal">
-        <div class="modal-content">
-            <button class="modal-close" id="modalClose">&times;</button>
-            <div class="modal-header">
-                <h3 id="modalTitle">Project Details</h3>
-            </div>
-            <div class="modal-body">
-                <div id="modalContent">
-                    <!-- Project details will be inserted here -->
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" id="lightboxClose">&times;</button>
-        <div class="lightbox-nav">
-            <button class="lightbox-btn" id="lightboxPrev">&#10094;</button>
-            <button class="lightbox-btn" id="lightboxNext">&#10095;</button>
-        </div>
-        <img class="lightbox-image" id="lightboxImage" src="" alt="">
-        <div class="lightbox-caption" id="lightboxCaption"></div>
-    </div>
 
     <script src="../assets/js/script.js"></script>
 </body>

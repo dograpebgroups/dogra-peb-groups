@@ -65,7 +65,7 @@ const gallery = [
     }
 ];
 
-
+// BANNER
 document.addEventListener("DOMContentLoaded", () => {
     const banners = document.querySelectorAll(".banner");
 
@@ -83,6 +83,37 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+// ABOUT US
+document.addEventListener('DOMContentLoaded', function() {
+    const statNumbers = document.querySelectorAll('.stat-number');
+    statNumbers.forEach(stat => {
+        const target = parseInt(stat.dataset.count);
+        let current = 0;
+        const increment = target / 50;
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                stat.textContent = target + '+';
+                clearInterval(timer);
+            } else {
+                stat.textContent = Math.floor(current);
+            }
+        }, 30);
+    });
+    
+    // Set active navigation
+    // const navLinks = document.querySelectorAll('.nav-link');
+    // navLinks.forEach(link => {
+    //     if (link.getAttribute('href') === 'about.html' || 
+    //         link.getAttribute('href') === './about.html') {
+    //         link.classList.add('active');
+    //     } else {
+    //         link.classList.remove('active');
+    //     }
+    // });
+});
+
+
 // ============================================
 // DOM ELEMENTS
 // ============================================
@@ -91,7 +122,7 @@ const header = document.getElementById('header');
 const mobileToggle = document.getElementById('mobileToggle');
 const navMobile = document.getElementById('navMobile');
 const navOverlay = document.getElementById('navOverlay');
-const navLinks = document.querySelectorAll('.nav-link');
+// const navLinks = document.querySelectorAll('.nav-link');
 const servicesTrack = document.getElementById('servicesTrack');
 const serviceDots = document.querySelectorAll('.slider-dot');
 const prevService = document.getElementById('prevService');
@@ -453,25 +484,25 @@ function setupScrollEffects() {
     });
 }
 
-function updateActiveNavLink() {
-    const sections = document.querySelectorAll('section[id]');
-    const scrollPos = window.scrollY + 100;
+// function updateActiveNavLink() {
+//     const sections = document.querySelectorAll('section[id]');
+//     const scrollPos = window.scrollY + 100;
     
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-        const sectionId = section.getAttribute('id');
+//     sections.forEach(section => {
+//         const sectionTop = section.offsetTop;
+//         const sectionHeight = section.offsetHeight;
+//         const sectionId = section.getAttribute('id');
         
-        if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${sectionId}`) {
-                    link.classList.add('active');
-                }
-            });
-        }
-    });
-}
+//         if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+//             navLinks.forEach(link => {
+//                 link.classList.remove('active');
+//                 if (link.getAttribute('href') === `#${sectionId}`) {
+//                     link.classList.add('active');
+//                 }
+//             });
+//         }
+//     });
+// }
 
 // ============================================
 // MOBILE MENU

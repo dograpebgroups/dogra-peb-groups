@@ -38,22 +38,24 @@
     <header id="header">
         <div class="container header-container">
             <div class="logo">
-                <img src="../assets/imgs/logo.png" class="logo-icon">
+                <a href="../index.html">
+                    <img src="../assets/imgs/logo.png" class="logo-icon">
+                </a>
                 <div class="logo-text">Dogra <span>PEB</span> Groups</div>
             </div>
 
             <nav class="nav-desktop">
                 <ul class="nav-list">
-                    <li><a href="#home" class="nav-link active">Home</a></li>
-                    <li><a href="#services" class="nav-link">Services</a></li>
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
-                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
-                    <li><a href="#faq" class="nav-link">FAQ</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="../services/index.html" class="nav-link active">Services</a></li>
+                    <li><a href="../projects/index.html" class="nav-link">Projects</a></li>
+                    <li><a href="../gallery/index.html" class="nav-link">Gallery</a></li>
+                    <li><a href="../about-us/index.html" class="nav-link">About</a></li>
+                    <li><a href="../contact-us/index.html" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
 
-            <a href="#contact" class="btn btn-primary header-cta">
+            <a href="../contact-us/index.html" class="btn btn-primary header-cta">
                 <i class="fas fa-phone-alt"></i> Get Quote
             </a>
 
@@ -66,13 +68,13 @@
 
         <nav class="nav-mobile" id="navMobile">
             <ul class="nav-list">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#gallery" class="nav-link">Gallery</a></li>
-                <li><a href="#faq" class="nav-link">FAQ</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li><a href="#contact" class="btn btn-primary" style="margin-top: 1rem;">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../services/index.html" class="nav-link active">Services</a></li>
+                <li><a href="../projects/index.html" class="nav-link">Projects</a></li>
+                <li><a href="../gallery/index.html" class="nav-link">Gallery</a></li>
+                <li><a href="../about-us/index.html" class="nav-link">About</a></li>
+                <li><a href="../contact-us/index.html" class="nav-link">Contact</a></li>
+                <li><a href="../contact-us/index.html" class="btn btn-primary" style="margin-top: 1rem;">
                         <i class="fas fa-phone-alt"></i> Get Quote
                     </a></li>
             </ul>
@@ -82,48 +84,222 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section id="home" class="hero services-page">
         <div class="hero-bg">
-            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
-                alt="Industrial Construction">
+            <img src="../assets/imgs/banners/services.png">
         </div>
         <div class="container">
             <div class="hero-content">
-                <h1>Building Excellence With Precision & Innovation</h1>
-                <p>Dogra PEB Groups delivers superior Pre-Engineered Building solutions, prefabricated houses,
-                    industrial tanks, and recreational infrastructure across India with 12+ years of trusted expertise.
+                <h1>Our Services, Engineered for Quality and Reliability</h1>
+                <p>
+                    Comprehensive PEB construction, prefab building solutions, steel fabrication, and infrastructure services tailored to your project needs
                 </p>
                 <div class="hero-btns">
-                    <a href="#contact" class="btn btn-primary">
-                        <i class="fas fa-calendar-alt"></i> Request Consultation
+                    <a href="../contact-us/index.html" class="btn btn-primary">
+                        <i class="fas fa-calendar-alt"></i> Request a Quote
                     </a>
-                    <a href="#projects" class="btn btn-outline">
-                        <i class="fas fa-hard-hat"></i> View Our Work
+                    <a href="../gallery/index.html" class="btn btn-outline">
+                        <i class="fas fa-images"></i> View Gallery
                     </a>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <div class="stat-number" data-count="350">0</div>
-                        <div class="stat-label">Projects Completed</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" data-count="12">0</div>
-                        <div class="stat-label">Years Experience</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" data-count="28">0</div>
-                        <div class="stat-label">Cities Across India</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" data-count="98">0</div>
-                        <div class="stat-label">Client Satisfaction</div>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <h1>HII WE ARE HITTING SOON CONTACT-US PAGE....</h1>
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Core Services</h2>
+                <p>
+                    We deliver reliable, steel-based construction and infrastructure solutions
+                    engineered for speed, durability, and long-term performance.
+                </p>
+            </div>
+
+            <div class="services-slider">
+                <div class="services-track" id="servicesTrack">
+
+                    <!-- Service Card 1 -->
+                    <div class="service-card fade-in" data-index="0">
+                        <div class="service-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>PEB Construction</h3>
+                        <p>
+                            Pre-Engineered Building solutions with factory-fabricated steel components
+                            for faster and cost-efficient construction.
+                        </p>
+                        <ul class="service-features">
+                            <li>Warehouses & Industrial Sheds</li>
+                            <li>Factories & Commercial Buildings</li>
+                            <li>Schools & Institutional Structures</li>
+                            <li>Custom Steel Design</li>
+                        </ul>
+                        <a href="services/index.html" class="btn btn-outline" style="margin-top: 1rem;">
+                            <i class="fas fa-arrow-right"></i> View Details
+                        </a>
+                    </div>
+
+                    <!-- Service Card 2 -->
+                    <div class="service-card fade-in" data-index="1">
+                        <div class="service-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>Prefabricated Houses</h3>
+                        <p>
+                            Modern modular homes manufactured off-site and assembled quickly
+                            with high-quality steel and insulated panels.
+                        </p>
+                        <ul class="service-features">
+                            <li>Residential & Farmhouses</li>
+                            <li>Resorts & Holiday Cottages</li>
+                            <li>Staff Quarters</li>
+                            <li>Custom Layouts</li>
+                        </ul>
+                        <a href="services/index.html" class="btn btn-outline" style="margin-top: 1rem;">
+                            <i class="fas fa-arrow-right"></i> View Details
+                        </a>
+                    </div>
+
+                    <!-- Service Card 3 -->
+                    <div class="service-card fade-in" data-index="2">
+                        <div class="service-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <h3>MS & SS Tank Fabrication</h3>
+                        <p>
+                            Precision-fabricated mild steel and stainless steel tanks for industrial,
+                            commercial, and hygienic applications.
+                        </p>
+                        <ul class="service-features">
+                            <li>Water & Chemical Storage</li>
+                            <li>Food & Pharma Grade Tanks</li>
+                            <li>Epoxy & Protective Coatings</li>
+                            <li>On-Site Fabrication</li>
+                        </ul>
+                        <a href="services/index.html" class="btn btn-outline" style="margin-top: 1rem;">
+                            <i class="fas fa-arrow-right"></i> View Details
+                        </a>
+                    </div>
+
+                    <!-- Service Card 4 -->
+                    <div class="service-card fade-in" data-index="3">
+                        <div class="service-icon">
+                            <i class="fas fa-child"></i>
+                        </div>
+                        <h3>Playway Equipment</h3>
+                        <p>
+                            Safe and durable playground equipment designed to support
+                            physical, cognitive, and social development.
+                        </p>
+                        <ul class="service-features">
+                            <li>Preschools & Daycare Centers</li>
+                            <li>Public Parks</li>
+                            <li>Residential Societies</li>
+                            <li>Child-Safe Designs</li>
+                        </ul>
+                        <a href="services/index.html" class="btn btn-outline" style="margin-top: 1rem;">
+                            <i class="fas fa-arrow-right"></i> View Details
+                        </a>
+                    </div>
+
+                    <!-- Service Card 5 -->
+                    <div class="service-card fade-in" data-index="4">
+                        <div class="service-icon">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <h3>Open Gym Equipment</h3>
+                        <p>
+                            Heavy-duty outdoor fitness equipment engineered for public use,
+                            promoting health and wellness in open spaces.
+                        </p>
+                        <ul class="service-features">
+                            <li>Parks & Community Areas</li>
+                            <li>Residential & Corporate Spaces</li>
+                            <li>Weather-Resistant Steel</li>
+                            <li>Low Maintenance</li>
+                        </ul>
+                        <a href="services/index.html" class="btn btn-outline" style="margin-top: 1rem;">
+                            <i class="fas fa-arrow-right"></i> View Details
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="slider-controls">
+                <button class="slider-btn" id="prevService">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="slider-dots" id="serviceDots">
+                    <div class="slider-dot active" data-index="0"></div>
+                    <div class="slider-dot" data-index="1"></div>
+                    <div class="slider-dot" data-index="2"></div>
+                    <!-- <div class="slider-dot" data-index="3"></div> -->
+                    <!-- <div class="slider-dot" data-index="4"></div> -->
+                </div>
+                <button class="slider-btn" id="nextService">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="services/index.html" class="btn btn-primary">
+                    <i class="fas fa-layer-group"></i> View All Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Working services in Action</h2>
+                <p>
+                    Visual highlights of our services, on-site execution, skilled workforce, and project progress across PEB construction, prefabrication, steel fabrication, and infrastructure development.
+                </p>
+            </div>
+
+            <div class="gallery-grid" id="galleryGrid">
+
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item fade-in" data-index="0">
+                    <img src="../assets/imgs/services/peb-working.png"
+                        alt="Pre-Engineered Warehouse Structure" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">
+                            <p style="font-weight: 500;">Working team on PEB Construction</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item fade-in" data-index="1">
+                    <img src="../assets/imgs/services/prefabricated-working.png"
+                        alt="Prefabricated Modular House" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">
+                            <p style="font-weight: 500;">Working team Prefabricated Houses</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item fade-in" data-index="2">
+                    <img src="../assets/imgs/services/tank-working.png"
+                        alt="Prefabricated Modular House" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">
+                            <p style="font-weight: 500;">Workin team on MS & SS Tank Fabrication</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -134,16 +310,16 @@
                     <p>Leading provider of Pre-Engineered Building solutions, prefabricated houses, industrial tanks,
                         and recreational infrastructure across India.</p>
                     <div class="footer-social">
-                        <a href="#" class="social-icon" aria-label="Facebook">
+                        <a href="../#" class="social-icon" aria-label="Facebook">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="social-icon" aria-label="Instagram">
+                        <a href="../#" class="social-icon" aria-label="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="social-icon" aria-label="LinkedIn">
+                        <a href="../#" class="social-icon" aria-label="LinkedIn">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="#" class="social-icon" aria-label="YouTube">
+                        <a href="../#" class="social-icon" aria-label="YouTube">
                             <i class="fab fa-youtube"></i>
                         </a>
                     </div>
@@ -152,24 +328,24 @@
                 <div>
                     <h3 class="footer-heading">Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../services/index.html">Services</a></li>
+                        <li><a href="../projects/index.html">Projects</a></li>
+                        <li><a href="../gallery/index.html">Gallery</a></li>
+                        <li><a href="../about-us/index.html">About</a></li>
+                        <li><a href="../contact-us/">Contact</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h3 class="footer-heading">Our Services</h3>
                     <ul class="footer-links">
-                        <li><a href="#services">PEB Construction</a></li>
-                        <li><a href="#services">Prefab Houses</a></li>
-                        <li><a href="#services">MS/SS Tanks</a></li>
-                        <li><a href="#services">Playway Equipment</a></li>
-                        <li><a href="#services">Open Gym Equipment</a></li>
-                        <li><a href="#services">Industrial Insulation</a></li>
+                        <li><a href="../services/index.html">PEB Construction</a></li>
+                        <li><a href="../services/index.html">Prefab Houses</a></li>
+                        <li><a href="../services/index.html">MS/SS Tanks</a></li>
+                        <li><a href="../services/index.html">Playway Equipment</a></li>
+                        <li><a href="../services/index.html">Open Gym Equipment</a></li>
+                        <li><a href="../services/index.html">Industrial Insulation</a></li>
                     </ul>
                 </div>
 
@@ -191,32 +367,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Project Modal -->
-    <div class="modal" id="projectModal">
-        <div class="modal-content">
-            <button class="modal-close" id="modalClose">&times;</button>
-            <div class="modal-header">
-                <h3 id="modalTitle">Project Details</h3>
-            </div>
-            <div class="modal-body">
-                <div id="modalContent">
-                    <!-- Project details will be inserted here -->
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" id="lightboxClose">&times;</button>
-        <div class="lightbox-nav">
-            <button class="lightbox-btn" id="lightboxPrev">&#10094;</button>
-            <button class="lightbox-btn" id="lightboxNext">&#10095;</button>
-        </div>
-        <img class="lightbox-image" id="lightboxImage" src="" alt="">
-        <div class="lightbox-caption" id="lightboxCaption"></div>
-    </div>
 
     <script src="../assets/js/script.js"></script>
 </body>
