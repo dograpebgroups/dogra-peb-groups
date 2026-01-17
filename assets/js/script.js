@@ -65,6 +65,24 @@ const gallery = [
     }
 ];
 
+
+document.addEventListener("DOMContentLoaded", () => {
+    const banners = document.querySelectorAll(".banner");
+
+    if (!banners.length) {
+        return;
+    }
+
+    let index = 0;
+
+    setInterval(() => {
+        banners[index].classList.remove("active");
+        index = (index + 1) % banners.length;
+        banners[index].classList.add("active");
+    }, 4000);
+});
+
+
 // ============================================
 // DOM ELEMENTS
 // ============================================
@@ -141,13 +159,13 @@ function updateServicesSlider() {
 
 function nextServiceSlide() {
     const cards = servicesTrack.querySelectorAll('.service-card');
-    currentService = (currentService + 1) % cards.length;
+    currentService = (currentService + 1) % 3;
     updateServicesSlider();
 }
 
 function prevServiceSlide() {
     const cards = servicesTrack.querySelectorAll('.service-card');
-    currentService = (currentService - 1 + cards.length) % cards.length;
+    currentService = (currentService - 1 + 3) % 3;
     updateServicesSlider();
 }
 
@@ -554,3 +572,4 @@ function setupEventListeners() {
 // ============================================
 
 document.addEventListener('DOMContentLoaded', init);
+

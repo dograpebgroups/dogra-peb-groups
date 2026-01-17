@@ -336,6 +336,24 @@ header.scrolled {
     object-fit: cover;
 }
 
+.banner {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.banner.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.banner-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
 .hero-content {
     position: relative;
     z-index: 2;
@@ -345,8 +363,9 @@ header.scrolled {
 }
 
 .hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 55px;
+    margin-bottom: 20px;
+    margin-top: 20px;
     color: white;
     line-height: 1.1;
 }
@@ -363,6 +382,30 @@ header.scrolled {
     flex-wrap: wrap;
     gap: 1rem;
     margin-bottom: 3rem;
+}
+
+.hero-trust {
+    margin-top: 18px;
+    letter-spacing: 0.5px;
+}
+
+.hero-trust span.innertext {
+    background: rgba(34, 40, 49, 0.95);
+    padding: 5px;
+    color: var(--color-accent);
+    font-size: 14px;
+    border-radius: 10px;
+    border-radius: 10px;
+}
+.hero-trust span.separator {
+    font-size: 16px;
+    color: var(--color-accent);
+    margin: 0 6px;
+    font-weight: 500;
+    background: rgba(34, 40, 49, 0.95);
+    font-weight: 500;
+    border-radius: 50px;
+    padding: 0px 4px 0px 4px;
 }
 
 .hero-stats {
@@ -621,7 +664,7 @@ header.scrolled {
     color: var(--color-accent);
     padding: 0.4rem 1rem;
     border-radius: 50px;
-    font-size: 0.875rem;
+    font-size: 13px;
     font-weight: 500;
 }
 
@@ -1157,9 +1200,15 @@ footer {
 }
 
 /* Responsive */
-@media (min-width: 576px) {
+@media (min-width: 375px) {
+
     .hero h1 {
-        font-size: 4rem;
+        font-size: 30px;
+    }
+
+    .logo-text {
+        display: block;
+        font-size: 18px;
     }
 
     .gallery-grid {
@@ -1171,9 +1220,36 @@ footer {
     }
 }
 
+@media (min-width: 576px) {
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .logo-text {
+        display: block;
+        font-size: 35px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero-stats {
+        justify-content: space-around;
+    }
+
+    .nav-list {
+        gap: 1.5rem;
+    }
+}
+
 @media (min-width: 768px) {
     .nav-desktop {
         display: flex;
+    }
+
+    .logo-text {
+        display: none;
     }
 
     .mobile-toggle {
@@ -1199,11 +1275,19 @@ footer {
     .footer-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .nav-list {
+        gap: 1.7rem;
+    }
 }
 
 @media (min-width: 992px) {
     .service-card {
         flex: 0 0 calc(33.333% - 1rem);
+    }
+
+    .logo-text {
+        display: none;
     }
 
     .projects-grid {
@@ -1215,13 +1299,26 @@ footer {
     }
 
     .hero h1 {
-        font-size: 4.5rem;
+        font-size: 55px;
+    }
+
+    .nav-list {
+        gap: 1.9rem;
     }
 }
 
 @media (min-width: 1200px) {
     .hero h1 {
-        font-size: 5rem;
+        font-size: 55px;
+    }
+
+    .logo-text {
+        display: block;
+        font-size: 1.75rem;
+    }
+
+    .nav-list {
+        gap: 2rem;
     }
 }
 
