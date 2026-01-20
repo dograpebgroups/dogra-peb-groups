@@ -1798,22 +1798,22 @@ footer {
     max-height: 100vh;
 }
 
-@media (max-width: 768px) {
-
-    #lightboxZoom.lightbox-btn, #lightboxFullscreen.lightbox-btn {
-        display: block;
-    }
-}
 @media (max-width: 992px) {
 
     #lightboxZoom.lightbox-btn, #lightboxFullscreen.lightbox-btn {
-        display: block;
+        display: none;
     }
 }
 @media (max-width: 1200px) {
 
     #lightboxZoom.lightbox-btn, #lightboxFullscreen.lightbox-btn {
-        display: block;
+        display: none;
+    }
+}
+@media (max-width: 375px) {
+
+    #lightboxZoom.lightbox-btn, #lightboxFullscreen.lightbox-btn {
+        display: none;
     }
 }
 
