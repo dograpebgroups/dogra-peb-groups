@@ -144,7 +144,7 @@
                             <span class="project-tag">Warehouse</span>
                             <span class="project-tag">Industrial</span>
                         </div>
-                        <a href="../projects/index.html#projectID" class="btn btn-outline" style="margin-top: 1rem;">
+                        <a href="#" class="btn btn-outline view-project-summary" style="margin-top: 1rem;">
                             <i class="fas fa-arrow-right"></i> View Project
                         </a>
                     </div>
@@ -175,7 +175,7 @@
                             <span class="project-tag">Resort</span>
                             <span class="project-tag">Modular</span>
                         </div>
-                        <a href="../projects/index.html#projectID" class="btn btn-outline" style="margin-top: 1rem;">
+                        <a href="#" class="btn btn-outline view-project-summary" style="margin-top: 1rem;">
                             <i class="fas fa-arrow-right"></i> View Project
                         </a>
                     </div>
@@ -206,7 +206,7 @@
                             <span class="project-tag">SS Tanks</span>
                             <span class="project-tag">Fabrication</span>
                         </div>
-                        <a href="../projects/index.html" class="btn btn-outline" style="margin-top: 1rem;">
+                        <a href="#" class="btn btn-outline view-project-summary" style="margin-top: 1rem;">
                             <i class="fas fa-arrow-right"></i> View Project
                         </a>
                     </div>
@@ -237,7 +237,7 @@
                             <span class="project-tag">Factory</span>
                             <span class="project-tag">Industrial</span>
                         </div>
-                        <a href="../projects/index.html#project-4" class="btn btn-outline" style="margin-top: 1rem;">
+                        <a href="#" class="btn btn-outline view-project-summary" style="margin-top: 1rem;">
                             <i class="fas fa-arrow-right"></i> View Project
                         </a>
                     </div>
@@ -268,7 +268,7 @@
                             <span class="project-tag">Residential</span>
                             <span class="project-tag">Staff Housing</span>
                         </div>
-                        <a href="../projects/index.html#project-5" class="btn btn-outline" style="margin-top: 1rem;">
+                        <a href="#" class="btn btn-outline view-project-summary" style="margin-top: 1rem;">
                             <i class="fas fa-arrow-right"></i> View Project
                         </a>
                     </div>
@@ -299,7 +299,7 @@
                             <span class="project-tag">Outdoor</span>
                             <span class="project-tag">Public</span>
                         </div>
-                        <a href="../projects/index.html#project-6" class="btn btn-outline" style="margin-top: 1rem;">
+                        <a href="#" class="btn btn-outline view-project-summary" style="margin-top: 1rem;">
                             <i class="fas fa-arrow-right"></i> View Project
                         </a>
                     </div>
@@ -330,7 +330,7 @@
                             <span class="project-tag">Playground</span>
                             <span class="project-tag">Safety</span>
                         </div>
-                        <a href="../projects/index.html#project-7" class="btn btn-outline" style="margin-top: 1rem;">
+                        <a href="#" class="btn btn-outline view-project-summary" style="margin-top: 1rem;">
                             <i class="fas fa-arrow-right"></i> View Project
                         </a>
                     </div>
@@ -361,7 +361,7 @@
                             <span class="project-tag">Commercial</span>
                             <span class="project-tag">Modular</span>
                         </div>
-                        <a href="../projects/index.html#project-8" class="btn btn-outline" style="margin-top: 1rem;">
+                        <a href="#" class="btn btn-outline view-project-summary" style="margin-top: 1rem;">
                             <i class="fas fa-arrow-right"></i> View Project
                         </a>
                     </div>
@@ -392,13 +392,11 @@
                             <span class="project-tag">Storage</span>
                             <span class="project-tag">Industrial</span>
                         </div>
-                        <a href="../projects/index.html#project-9" class="btn btn-outline" style="margin-top: 1rem;">
+                        <a href="#" class="btn btn-outline view-project-summary" style="margin-top: 1rem;">
                             <i class="fas fa-arrow-right"></i> View Project
                         </a>
                     </div>
                 </div>
-
-
 
             </div>
         </div>
@@ -470,6 +468,121 @@
             </div>
         </div>
     </footer>
+
+
+    <!-- Project Summary Popup -->
+    <div class="project-popup" id="projectPopup">
+        <div class="project-popup-container">
+            <!-- Header -->
+            <div class="project-popup-header">
+                <div class="project-popup-title-section">
+                    <h2 class="project-popup-title" id="projectPopupTitle">Project Title</h2>
+                    <div class="project-popup-location" id="projectPopupLocation">
+                        <i class="fas fa-map-marker-alt"></i> <span>Loading...</span>
+                    </div>
+                </div>
+                <button class="project-popup-close" id="projectPopupClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Content -->
+            <div class="project-popup-content">
+                <!-- Image -->
+                <div class="project-popup-image">
+                    <img id="projectPopupImage" src="" alt="Project Image" loading="lazy">
+                    <div class="project-popup-image-overlay"></div>
+                    <div class="project-popup-image-badge">
+                        <i class="fas fa-award"></i> Completed Project
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <div class="project-popup-description">
+                    <p class="project-typewriter-text" id="projectPopupDescription"></p>
+                    <div class="project-typewriter-cursor">|</div>
+                </div>
+
+                <!-- Project Details Grid -->
+                <div class="project-details-grid">
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-ruler-combined"></i>
+                        </div>
+                        <div class="detail-content">
+                            <div class="detail-label">Project Scale</div>
+                            <div class="detail-value" id="projectPopupScale">Medium</div>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="detail-content">
+                            <div class="detail-label">Timeline</div>
+                            <div class="detail-value" id="projectPopupTimeline">12 Weeks</div>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <div class="detail-content">
+                            <div class="detail-label">Category</div>
+                            <div class="detail-value" id="projectPopupCategory">Industrial</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Points from Tags -->
+                <div class="project-key-points">
+                    <h3><i class="fas fa-star"></i> Key Highlights</h3>
+                    <div class="key-points-grid" id="projectPopupKeyPoints">
+                        <!-- Points will be added here -->
+                    </div>
+                </div>
+
+                <!-- Client Testimonial -->
+                <div class="project-testimonial">
+                    <h3><i class="fas fa-comment"></i> Client Feedback</h3>
+                    <div class="testimonial-card">
+                        <div class="client-info">
+                            <div class="client-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="client-details">
+                                <div class="client-name" id="projectPopupClientName">Rohit Sharma</div>
+                                <div class="client-role" id="projectPopupClientRole">Project Manager</div>
+                            </div>
+                            <div class="client-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                        <p class="testimonial-text" id="projectPopupTestimonial">
+                            "Excellent work! The team delivered beyond our expectations."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="project-popup-actions">
+                    <button class="btn btn-primary" onclick="closeProjectPopup()">
+                        <i class="fas fa-check-circle"></i> Got It
+                    </button>
+                    <button class="btn btn-outline" onclick="closeProjectPopup()">
+                        <i class="fas fa-times"></i> Close
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="project-popup-overlay" id="projectPopupOverlay"></div>
+    </div>
+
 
     <script src="../assets/js/script.js"></script>
 </body>

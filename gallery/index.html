@@ -269,15 +269,86 @@
                     </div>
                 </div>
 
-                <!-- Gallery Item 16 -->
-                <!-- <div class="gallery-item fade-in" data-index="15">
-                    <img src="../assets/imgs/gallery/working-img16.jpeg" alt="Playground Equipment Setup" loading="lazy">
+                <!-- Gallery Item 17 -->
+                <div class="gallery-item fade-in" data-index="16">
+                    <img src="../assets/imgs/gallery/working-img17.jpeg" alt="Playground Equipment Setup" loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-caption">
                             <p style="font-weight: 500;"></p>
                         </div>
                     </div>
-                </div> -->
+                </div>
+
+                <!-- Gallery Item 18 -->
+                <div class="gallery-item fade-in" data-index="17">
+                    <img src="../assets/imgs/gallery/working-img18.jpeg" alt="Playground Equipment Setup" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">
+                            <p style="font-weight: 500;"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 19 -->
+                <div class="gallery-item fade-in" data-index="18">
+                    <img src="../assets/imgs/gallery/working-img19.jpeg" alt="Playground Equipment Setup" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">
+                            <p style="font-weight: 500;"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 20 -->
+                <div class="gallery-item fade-in" data-index="19">
+                    <img src="../assets/imgs/gallery/working-img20.jpeg" alt="Playground Equipment Setup" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">
+                            <p style="font-weight: 500;"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 21 -->
+                <div class="gallery-item fade-in" data-index="20">
+                    <img src="../assets/imgs/gallery/working-img21.jpeg" alt="Playground Equipment Setup" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">
+                            <p style="font-weight: 500;"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 22 -->
+                <div class="gallery-item fade-in" data-index="21">
+                    <img src="../assets/imgs/gallery/working-img22.jpeg" alt="Playground Equipment Setup" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">
+                            <p style="font-weight: 500;"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 23 -->
+                <div class="gallery-item fade-in" data-index="22">
+                    <img src="../assets/imgs/gallery/working-img23.jpeg" alt="Playground Equipment Setup" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">
+                            <p style="font-weight: 500;"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 24 -->
+                <div class="gallery-item fade-in" data-index="23">
+                    <img src="../assets/imgs/gallery/working-img24.jpeg" alt="Playground Equipment Setup" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">
+                            <p style="font-weight: 500;"></p>
+                        </div>
+                    </div>
+                </div>
+
 
             </div>
 
@@ -350,6 +421,76 @@
             </div>
         </div>
     </footer>
+
+
+    <!-- ============================================
+    IMAGE LIGHTBOX MODAL 
+    ============================================ -->
+
+    <div class="lightbox-modal" id="imageLightbox">
+        <div class="lightbox-header">
+            <div class="lightbox-info">
+                <span class="lightbox-title" id="lightboxTitle"></span>
+                <span class="lightbox-counter" id="lightboxCounter"></span>
+            </div>
+            <div class="lightbox-controls">
+                <button class="lightbox-btn" id="lightboxDownload" title="Download">
+                    <i class="fas fa-download"></i>
+                </button>
+                <button class="lightbox-btn" id="lightboxZoom" title="Zoom">
+                    <i class="fas fa-search-plus"></i>
+                </button>
+                <button class="lightbox-btn" id="lightboxFullscreen" title="Fullscreen">
+                    <i class="fas fa-expand"></i>
+                </button>
+                <button class="lightbox-btn lightbox-close" id="lightboxClose" title="Close (Esc)">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="lightbox-content">
+            <div class="image-container">
+                <img id="lightboxImage" alt="Gallery Image" loading="lazy">
+                <div class="loading-spinner">
+                    <div class="spinner"></div>
+                </div>
+                <div class="image-error" id="imageError">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <p>Failed to load image</p>
+                </div>
+            </div>
+            
+            <button class="nav-arrow prev-arrow" id="lightboxPrev" aria-label="Previous image">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="nav-arrow next-arrow" id="lightboxNext" aria-label="Next image">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <div class="lightbox-footer">
+            <div class="thumbnail-track" id="thumbnailTrack">
+                <!-- Thumbnails will be dynamically added here -->
+            </div>
+            <div class="image-meta" id="imageMeta">
+                <div class="meta-item">
+                    <i class="fas fa-camera"></i>
+                    <span>High Resolution</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span id="imageDate">Today</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-info-circle"></i>
+                    <span id="imageDimensions">Loading...</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="lightbox-overlay" id="lightboxOverlay"></div>
+    </div>
 
     <script src="../assets/js/script.js"></script>
 </body>

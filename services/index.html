@@ -136,7 +136,7 @@
                             <li>Schools & Institutional Structures</li>
                             <li>Custom Steel Design</li>
                         </ul>
-                        <a href="services/index.html" class="btn btn-outline" style="margin-top: 1rem;">
+                        <a href="#" class="btn btn-outline view-service-summary" style="margin-top: 1rem;">
                             <i class="fas fa-arrow-right"></i> View Details
                         </a>
                     </div>
@@ -157,7 +157,7 @@
                             <li>Staff Quarters</li>
                             <li>Custom Layouts</li>
                         </ul>
-                        <a href="services/index.html" class="btn btn-outline" style="margin-top: 1rem;">
+                        <a href="#" class="btn btn-outline view-service-summary" style="margin-top: 1rem;">
                             <i class="fas fa-arrow-right"></i> View Details
                         </a>
                     </div>
@@ -178,7 +178,7 @@
                             <li>Epoxy & Protective Coatings</li>
                             <li>On-Site Fabrication</li>
                         </ul>
-                        <a href="services/index.html" class="btn btn-outline" style="margin-top: 1rem;">
+                        <a href="#" class="btn btn-outline view-service-summary" style="margin-top: 1rem;">
                             <i class="fas fa-arrow-right"></i> View Details
                         </a>
                     </div>
@@ -199,7 +199,7 @@
                             <li>Residential Societies</li>
                             <li>Child-Safe Designs</li>
                         </ul>
-                        <a href="services/index.html" class="btn btn-outline" style="margin-top: 1rem;">
+                        <a href="#" class="btn btn-outline view-service-summary" style="margin-top: 1rem;">
                             <i class="fas fa-arrow-right"></i> View Details
                         </a>
                     </div>
@@ -220,7 +220,7 @@
                             <li>Weather-Resistant Steel</li>
                             <li>Low Maintenance</li>
                         </ul>
-                        <a href="services/index.html" class="btn btn-outline" style="margin-top: 1rem;">
+                        <a href="#" class="btn btn-outline view-service-summary" style="margin-top: 1rem;">
                             <i class="fas fa-arrow-right"></i> View Details
                         </a>
                     </div>
@@ -245,7 +245,7 @@
             </div>
 
             <div style="text-align: center; margin-top: 3rem;">
-                <a href="services/index.html" class="btn btn-primary">
+                <a href="../services/index.html" class="btn btn-primary">
                     <i class="fas fa-layer-group"></i> View All Services
                 </a>
             </div>
@@ -367,6 +367,59 @@
             </div>
         </div>
     </footer>
+
+    <!-- ============================================
+    Service Summary Popup 
+    ============================================ -->
+    <div class="service-popup" id="servicePopup">
+        <div class="service-popup-container">
+            <!-- Header with icon and title -->
+            <div class="service-popup-header">
+                <div class="service-popup-icon-title">
+                    <div class="service-popup-icon" id="servicePopupIcon">
+                        <!-- Icon will be inserted here -->
+                    </div>
+                    <div>
+                        <h2 class="service-popup-title" id="servicePopupTitle">Service Title</h2>
+                        <div class="service-popup-subtitle">Detailed Overview</div>
+                    </div>
+                </div>
+                <button class="service-popup-close" id="servicePopupClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Main Content -->
+            <div class="service-popup-content">
+                <!-- Main description with typewriter -->
+                <div class="service-popup-description">
+                    <p class="typewriter-text" id="servicePopupDescription">
+                        <!-- Description will be typed here -->
+                    </p>
+                    <div class="typewriter-cursor">|</div>
+                </div>
+
+                <!-- Features with animated checkboxes -->
+                <div class="service-popup-features">
+                    <h3><i class="fas fa-star"></i> Key Features</h3>
+                    <div class="features-list" id="servicePopupFeatures">
+                        <!-- Features will be added here -->
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="service-popup-actions">
+                    <button class="btn btn-primary" onclick="window.location.href='contact.html'">
+                        <i class="fas fa-calendar-check"></i> Get Quote
+                    </button>
+                    <button class="btn btn-outline" onclick="closeServicePopup()">
+                        <i class="fas fa-times"></i> Close
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="service-popup-overlay" id="servicePopupOverlay"></div>
+    </div>
 
     <script src="../assets/js/script.js"></script>
 </body>

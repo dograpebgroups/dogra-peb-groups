@@ -107,6 +107,7 @@
                 </div>
 
                 <div class="hero-trust">
+                    <span class="separator">✦</span>
                     <span class="innertext">ISO 9001:2015 Certified</span>
                     <span class="separator">✦</span>
                     <span class="innertext">MSME Registered</span>
@@ -166,7 +167,7 @@
                             <li>Schools & Institutional Structures</li>
                             <li>Custom Steel Design</li>
                         </ul>
-                        <a href="services/index.html" class="btn btn-outline" style="margin-top: 1rem;">
+                        <a href="#" class="btn btn-outline view-service-summary" style="margin-top: 1rem;">
                             <i class="fas fa-arrow-right"></i> View Details
                         </a>
                     </div>
@@ -187,7 +188,7 @@
                             <li>Staff Quarters</li>
                             <li>Custom Layouts</li>
                         </ul>
-                        <a href="services/index.html" class="btn btn-outline" style="margin-top: 1rem;">
+                        <a href="#" class="btn btn-outline view-service-summary" style="margin-top: 1rem;">
                             <i class="fas fa-arrow-right"></i> View Details
                         </a>
                     </div>
@@ -208,7 +209,7 @@
                             <li>Epoxy & Protective Coatings</li>
                             <li>On-Site Fabrication</li>
                         </ul>
-                        <a href="services/index.html" class="btn btn-outline" style="margin-top: 1rem;">
+                        <a href="#" class="btn btn-outline view-service-summary" style="margin-top: 1rem;">
                             <i class="fas fa-arrow-right"></i> View Details
                         </a>
                     </div>
@@ -229,7 +230,7 @@
                             <li>Residential Societies</li>
                             <li>Child-Safe Designs</li>
                         </ul>
-                        <a href="services/index.html" class="btn btn-outline" style="margin-top: 1rem;">
+                        <a href="#" class="btn btn-outline view-service-summary" style="margin-top: 1rem;">
                             <i class="fas fa-arrow-right"></i> View Details
                         </a>
                     </div>
@@ -250,7 +251,7 @@
                             <li>Weather-Resistant Steel</li>
                             <li>Low Maintenance</li>
                         </ul>
-                        <a href="services/index.html" class="btn btn-outline" style="margin-top: 1rem;">
+                        <a href="#" class="btn btn-outline view-service-summary" style="margin-top: 1rem;">
                             <i class="fas fa-arrow-right"></i> View Details
                         </a>
                     </div>
@@ -320,7 +321,7 @@
                             <span class="project-tag">Warehouse</span>
                             <span class="project-tag">Industrial</span>
                         </div>
-                        <a href="projects/index.html#projectID" class="btn btn-outline" style="margin-top: 1rem;">
+                        <a href="#" class="btn btn-outline view-project-summary" style="margin-top: 1rem;">
                             <i class="fas fa-arrow-right"></i> View Project
                         </a>
                     </div>
@@ -351,7 +352,7 @@
                             <span class="project-tag">Resort</span>
                             <span class="project-tag">Modular</span>
                         </div>
-                        <a href="projects/index.html#projectID" class="btn btn-outline" style="margin-top: 1rem;">
+                        <a href="#" class="btn btn-outline view-project-summary" style="margin-top: 1rem;">
                             <i class="fas fa-arrow-right"></i> View Project
                         </a>
                     </div>
@@ -382,7 +383,7 @@
                             <span class="project-tag">SS Tanks</span>
                             <span class="project-tag">Fabrication</span>
                         </div>
-                        <a href="projects/index.html" class="btn btn-outline" style="margin-top: 1rem;">
+                        <a href="#" class="btn btn-outline view-project-summary" style="margin-top: 1rem;">
                             <i class="fas fa-arrow-right"></i> View Project
                         </a>
                     </div>
@@ -435,7 +436,7 @@
 
                 <!-- Gallery Item 3 -->
                 <div class="gallery-item fade-in" data-index="2">
-                    <img src="assets/imgs/gallery/working-img7.jpeg"
+                    <img src="assets/imgs/gallery/working-img17.jpeg"
                         alt="Prefabricated Modular House" loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-caption">
@@ -446,7 +447,7 @@
 
                 <!-- Gallery Item 4 -->
                 <div class="gallery-item fade-in" data-index="3">
-                    <img src="assets/imgs/gallery/working-img10.jpeg"
+                    <img src="assets/imgs/gallery/working-img22.jpeg"
                         alt="Children Playground Equipment" loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-caption">
@@ -457,7 +458,7 @@
 
                 <!-- Gallery Item 5 -->
                 <div class="gallery-item fade-in" data-index="4">
-                    <img src="assets/imgs/gallery/working-img16.jpeg"
+                    <img src="assets/imgs/gallery/working-img12.jpeg"
                         alt="Outdoor Open Gym Equipment" loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-caption">
@@ -468,7 +469,7 @@
 
                 <!-- Gallery Item 6 -->
                 <div class="gallery-item fade-in" data-index="5">
-                    <img src="assets/imgs/gallery/working-img13.jpeg"
+                    <img src="assets/imgs/gallery/working-img20.jpeg"
                         alt="Industrial Factory Interior" loading="lazy">
                     <div class="gallery-overlay">
                         <div class="gallery-caption">
@@ -691,30 +692,238 @@
         </div>
     </footer>
 
-    <!-- Project Modal -->
-    <div class="modal" id="projectModal">
-        <div class="modal-content">
-            <button class="modal-close" id="modalClose">&times;</button>
-            <div class="modal-header">
-                <h3 id="modalTitle">Project Details</h3>
+    <!-- ============================================
+    IMAGE LIGHTBOX MODAL 
+    ============================================ -->
+    <div class="lightbox-modal" id="imageLightbox">
+        <div class="lightbox-header">
+            <div class="lightbox-info">
+                <span class="lightbox-title" id="lightboxTitle"></span>
+                <span class="lightbox-counter" id="lightboxCounter"></span>
             </div>
-            <div class="modal-body">
-                <div id="modalContent">
-                    <!-- Project details will be inserted here -->
+            <div class="lightbox-controls">
+                <button class="lightbox-btn" id="lightboxDownload" title="Download">
+                    <i class="fas fa-download"></i>
+                </button>
+                <button class="lightbox-btn" id="lightboxZoom" title="Zoom">
+                    <i class="fas fa-search-plus"></i>
+                </button>
+                <button class="lightbox-btn" id="lightboxFullscreen" title="Fullscreen">
+                    <i class="fas fa-expand"></i>
+                </button>
+                <button class="lightbox-btn lightbox-close" id="lightboxClose" title="Close (Esc)">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="lightbox-content">
+            <div class="image-container">
+                <img id="lightboxImage" alt="Gallery Image" loading="lazy">
+                <div class="loading-spinner">
+                    <div class="spinner"></div>
+                </div>
+                <div class="image-error" id="imageError">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <p>Failed to load image</p>
+                </div>
+            </div>
+            
+            <button class="nav-arrow prev-arrow" id="lightboxPrev" aria-label="Previous image">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="nav-arrow next-arrow" id="lightboxNext" aria-label="Next image">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <div class="lightbox-footer">
+            <div class="thumbnail-track" id="thumbnailTrack">
+                <!-- Thumbnails will be dynamically added here -->
+            </div>
+            <div class="image-meta" id="imageMeta">
+                <div class="meta-item">
+                    <i class="fas fa-camera"></i>
+                    <span>High Resolution</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span id="imageDate">Today</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-info-circle"></i>
+                    <span id="imageDimensions">Loading...</span>
                 </div>
             </div>
         </div>
+
+        <div class="lightbox-overlay" id="lightboxOverlay"></div>
     </div>
 
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" id="lightboxClose">&times;</button>
-        <div class="lightbox-nav">
-            <button class="lightbox-btn" id="lightboxPrev">&#10094;</button>
-            <button class="lightbox-btn" id="lightboxNext">&#10095;</button>
+    <!-- ============================================
+    Service Summary Popup 
+    ============================================ -->
+    <div class="service-popup" id="servicePopup">
+        <div class="service-popup-container">
+            <!-- Header with icon and title -->
+            <div class="service-popup-header">
+                <div class="service-popup-icon-title">
+                    <div class="service-popup-icon" id="servicePopupIcon">
+                        <!-- Icon will be inserted here -->
+                    </div>
+                    <div>
+                        <h2 class="service-popup-title" id="servicePopupTitle">Service Title</h2>
+                        <div class="service-popup-subtitle">Detailed Overview</div>
+                    </div>
+                </div>
+                <button class="service-popup-close" id="servicePopupClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Main Content -->
+            <div class="service-popup-content">
+                <!-- Main description with typewriter -->
+                <div class="service-popup-description">
+                    <p class="typewriter-text" id="servicePopupDescription">
+                        <!-- Description will be typed here -->
+                    </p>
+                    <div class="typewriter-cursor">|</div>
+                </div>
+
+                <!-- Features with animated checkboxes -->
+                <div class="service-popup-features">
+                    <h3><i class="fas fa-star"></i> Key Features</h3>
+                    <div class="features-list" id="servicePopupFeatures">
+                        <!-- Features will be added here -->
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="service-popup-actions">
+                    <button class="btn btn-primary" onclick="window.location.href='contact.html'">
+                        <i class="fas fa-calendar-check"></i> Get Quote
+                    </button>
+                    <button class="btn btn-outline" onclick="closeServicePopup()">
+                        <i class="fas fa-times"></i> Close
+                    </button>
+                </div>
+            </div>
         </div>
-        <img class="lightbox-image" id="lightboxImage" src="" alt="">
-        <div class="lightbox-caption" id="lightboxCaption"></div>
+        <div class="service-popup-overlay" id="servicePopupOverlay"></div>
+    </div>
+
+    <!-- Project Summary Popup -->
+    <div class="project-popup" id="projectPopup">
+        <div class="project-popup-container">
+            <!-- Header -->
+            <div class="project-popup-header">
+                <div class="project-popup-title-section">
+                    <h2 class="project-popup-title" id="projectPopupTitle">Project Title</h2>
+                    <div class="project-popup-location" id="projectPopupLocation">
+                        <i class="fas fa-map-marker-alt"></i> <span>Loading...</span>
+                    </div>
+                </div>
+                <button class="project-popup-close" id="projectPopupClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Content -->
+            <div class="project-popup-content">
+                <!-- Image -->
+                <div class="project-popup-image">
+                    <img id="projectPopupImage" src="" alt="Project Image" loading="lazy">
+                    <div class="project-popup-image-overlay"></div>
+                    <div class="project-popup-image-badge">
+                        <i class="fas fa-award"></i> Completed Project
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <div class="project-popup-description">
+                    <p class="project-typewriter-text" id="projectPopupDescription"></p>
+                    <div class="project-typewriter-cursor">|</div>
+                </div>
+
+                <!-- Project Details Grid -->
+                <div class="project-details-grid">
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-ruler-combined"></i>
+                        </div>
+                        <div class="detail-content">
+                            <div class="detail-label">Project Scale</div>
+                            <div class="detail-value" id="projectPopupScale">Medium</div>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="detail-content">
+                            <div class="detail-label">Timeline</div>
+                            <div class="detail-value" id="projectPopupTimeline">12 Weeks</div>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <div class="detail-content">
+                            <div class="detail-label">Category</div>
+                            <div class="detail-value" id="projectPopupCategory">Industrial</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Points from Tags -->
+                <div class="project-key-points">
+                    <h3><i class="fas fa-star"></i> Key Highlights</h3>
+                    <div class="key-points-grid" id="projectPopupKeyPoints">
+                        <!-- Points will be added here -->
+                    </div>
+                </div>
+
+                <!-- Client Testimonial -->
+                <div class="project-testimonial">
+                    <h3><i class="fas fa-comment"></i> Client Feedback</h3>
+                    <div class="testimonial-card">
+                        <div class="client-info">
+                            <div class="client-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="client-details">
+                                <div class="client-name" id="projectPopupClientName">Rohit Sharma</div>
+                                <div class="client-role" id="projectPopupClientRole">Project Manager</div>
+                            </div>
+                            <div class="client-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                        <p class="testimonial-text" id="projectPopupTestimonial">
+                            "Excellent work! The team delivered beyond our expectations."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="project-popup-actions">
+                    <button class="btn btn-primary" onclick="closeProjectPopup()">
+                        <i class="fas fa-check-circle"></i> Got It
+                    </button>
+                    <button class="btn btn-outline" onclick="closeProjectPopup()">
+                        <i class="fas fa-times"></i> Close
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="project-popup-overlay" id="projectPopupOverlay"></div>
     </div>
 
     <script src="assets/js/script.js"></script>
