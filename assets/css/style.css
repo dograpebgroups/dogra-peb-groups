@@ -32,7 +32,7 @@ html {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-size: 16px;
     line-height: 1.7;
     color: var(--color-text);
@@ -47,7 +47,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-weight: 700;
     line-height: 1.2;
     color: var(--color-primary);
@@ -326,7 +326,7 @@ header.scrolled {
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.4;
+    opacity: 0.7;
     z-index: 1;
 }
 
@@ -396,6 +396,8 @@ header.scrolled {
     font-size: 14px;
     border-radius: 10px;
     border-radius: 10px;
+    display: flex;
+    gap: 5px;
 }
 .hero-trust span.separator {
     font-size: 16px;
@@ -406,6 +408,10 @@ header.scrolled {
     font-weight: 500;
     border-radius: 50px;
     padding: 0px 4px 0px 4px;
+}
+
+span.separator-mb {
+    display: none;
 }
 
 .hero-stats {
@@ -876,6 +882,12 @@ header.scrolled {
     border: 2px dashed rgba(255, 106, 0, 0.2);
 }
 
+/* cta */
+.btn.btn-get-started {
+    background: #fff;
+    color: var(--color-accent);
+}
+
 /* Footer */
 footer {
     background: var(--color-footer);
@@ -1063,6 +1075,18 @@ footer {
     .contact-info.hm-page {
         display: block;
     }
+
+    .hero-trust {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    span.separator {
+        display: none;
+    }
+    span.separator-mb {
+        display: block;
+    }
 }
 
 @media (min-width: 576px) {
@@ -1088,6 +1112,18 @@ footer {
     }
 
     .contact-info.hm-page {
+        display: block;
+    }
+
+    .hero-trust {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    span.separator {
+        display: none;
+    }
+    span.separator-mb {
         display: block;
     }
 }
@@ -1132,6 +1168,19 @@ footer {
     .contact-info.hm-page {
         display: flex;
     }
+
+    .hero-trust {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    span.separator {
+        display: block;
+    }
+    span.separator-mb {
+        display: none;
+    }
 }
 
 @media (min-width: 992px) {
@@ -1162,6 +1211,20 @@ footer {
     .contact-info.hm-page {
         display: flex;
     }
+
+    .hero-trust {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    span.separator {
+        display: block;
+    }
+
+    span.separator-mb {
+        display: none;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -1180,6 +1243,20 @@ footer {
 
     .contact-info.hm-page {
         display: flex;
+    }
+
+    .hero-trust {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    span.separator {
+        display: block;
+    }
+
+    span.separator-mb {
+        display: none;
     }
 }
 
@@ -2426,6 +2503,27 @@ footer {
     backdrop-filter: blur(10px);
 }
 
+.popup-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    border: none;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.popup-prev { left: 16px; }
+.popup-next { right: 16px; }
+
+.popup-nav:hover {
+    background: rgba(0,0,0,0.7);
+}
+
 /* Description */
 .project-popup-description {
     margin-bottom: 1.5rem;
@@ -2710,3 +2808,6 @@ footer {
         text-align: center;
     }
 }
+
+
+/* ********************************* Animations *************************************** */

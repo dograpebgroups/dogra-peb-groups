@@ -64,6 +64,7 @@ const newsletterForm = document.getElementById('newsletterForm');
 // ============================================
 
 let currentService = 0;
+const visibleCards = 3;
 
 // ============================================
 // INITIALIZATION
@@ -93,50 +94,48 @@ function updateServicesSlider() {
     const track = servicesTrack;
     const cards = track.querySelectorAll('.service-card');
     const dots = document.querySelectorAll('.slider-dot');
-    
+
     if (!cards.length) return;
-    
-    // Calculate card width with margin
+
     const cardStyle = window.getComputedStyle(cards[0]);
-    const cardWidth = cards[0].offsetWidth + 
-        parseInt(cardStyle.marginLeft) + 
+    const cardWidth =
+        cards[0].offsetWidth +
+        parseInt(cardStyle.marginLeft) +
         parseInt(cardStyle.marginRight);
-    
-    // Update track position
+
+    const maxSlides = cards.length - visibleCards + 1;
+
+    // Safety clamp
+    if (currentService >= maxSlides) {
+        currentService = maxSlides - 1;
+    }
+
     track.style.transform = `translateX(-${currentService * cardWidth}px)`;
-    
-    // Update dots
+
     dots.forEach((dot, index) => {
         dot.classList.toggle('active', index === currentService);
     });
 }
 
+
 function nextServiceSlide() {
-    if (!servicesTrack) return;
-    
     const cards = servicesTrack.querySelectorAll('.service-card');
-    if (!cards.length) return;
-    
-    currentService = (currentService + 1) % cards.length;
-    updateServicesSlider();
+    const maxSlides = cards.length - visibleCards + 1;
+
+    if (currentService < maxSlides - 1) {
+        currentService++;
+        updateServicesSlider();
+    }
 }
 
 function prevServiceSlide() {
-    if (!servicesTrack) return;
-    
-    const cards = servicesTrack.querySelectorAll('.service-card');
-    if (!cards.length) return;
-    
-    currentService = (currentService - 1 + cards.length) % cards.length;
-    updateServicesSlider();
+    if (currentService > 0) {
+        currentService--;
+        updateServicesSlider();
+    }
 }
 
 function goToService(index) {
-    if (!servicesTrack) return;
-    
-    const cards = servicesTrack.querySelectorAll('.service-card');
-    if (!cards.length || index < 0 || index >= cards.length) return;
-    
     currentService = index;
     updateServicesSlider();
 }
@@ -404,10 +403,10 @@ function setupEventListeners() {
     // Setup forms
     setupForms();
     
-    // Auto advance services slider (only if slider exists)
-    if (servicesTrack) {
-        setInterval(nextServiceSlide, 5000);
-    }
+    // // Auto advance services slider (only if slider exists)
+    // if (servicesTrack) {
+    //     setInterval(nextServiceSlide, 5000);
+    // }
 }
 
 // ============================================
@@ -813,382 +812,123 @@ document.addEventListener('DOMContentLoaded', () => {
 // ============================================
 // PROJECT POPUP WITH ENHANCED DATA
 // ============================================
+document.addEventListener("DOMContentLoaded", () => {
 
-// Project Data based on your cards
-const projectData = {
-    1: {
-        scale: "Large Scale (25,000 sq.ft.)",
-        timeline: "12 Weeks",
-        category: "PEB Construction",
-        points: [
-            "Pre-engineered steel structure for maximum strength",
-            "Fast-track construction with modular design",
-            "Industrial-grade insulation systems",
-            "Customizable layouts for warehouse operations",
-            "Earthquake-resistant engineering",
-            "Low maintenance & long lifespan"
-        ],
-        client: {
-            name: "Rajesh Kumar",
-            role: "Operations Director",
-            testimonial: "Dogra PEB Group delivered our warehouse project ahead of schedule with exceptional quality. Their attention to detail and professional approach made the entire process smooth and efficient."
-        }
-    },
-    2: {
-        scale: "Medium Scale (12,000 sq.ft.)",
-        timeline: "8 Weeks",
-        category: "Prefab Construction",
-        points: [
-            "Modular prefabricated cottages for resorts",
-            "Weather-resistant premium materials",
-            "Quick on-site assembly process",
-            "Modern interior designs & layouts",
-            "Eco-friendly construction approach",
-            "Scenic hillside location optimization"
-        ],
-        client: {
-            name: "Priya Sharma",
-            role: "Resort Owner",
-            testimonial: "The prefab cottages transformed our resort completely. The quality exceeded our expectations, and the quick installation meant we could start operations much sooner than planned."
-        }
-    },
-    3: {
-        scale: "Industrial Scale (60,000L)",
-        timeline: "6 Weeks",
-        category: "Tank Fabrication",
-        points: [
-            "Stainless steel food-grade fabrication",
-            "Hygienic processing tank systems",
-            "Corrosion-resistant protective coatings",
-            "Custom capacity configurations",
-            "ISO & FDA compliance standards",
-            "Easy maintenance access design"
-        ],
-        client: {
-            name: "Amit Patel",
-            role: "Plant Manager",
-            testimonial: "The SS tanks fabricated for our dairy plant are of exceptional quality. They met all our hygiene standards and have been performing flawlessly since installation."
-        }
-    },
-    4: {
-        scale: "Large Scale (30,000 sq.ft.)",
-        timeline: "14 Weeks",
-        category: "PEB Industrial",
-        points: [
-            "Pre-engineered factory shed structure",
-            "Heavy-duty industrial operations design",
-            "Flexible manufacturing space layout",
-            "Quick installation process",
-            "Cost-effective construction solution",
-            "Durable & weather-resistant materials"
-        ],
-        client: {
-            name: "Sanjay Gupta",
-            role: "Factory Owner",
-            testimonial: "Our factory shed was constructed with precision and efficiency. The team handled all challenges professionally, delivering a structure that perfectly meets our manufacturing needs."
-        }
-    },
-    5: {
-        scale: "Residential Complex",
-        timeline: "10 Weeks",
-        category: "Prefab Housing",
-        points: [
-            "Modular staff housing units",
-            "Fast delivery & deployment system",
-            "Durable construction materials",
-            "Cost-efficient accommodation solution",
-            "Comfortable living spaces",
-            "Easy maintenance design"
-        ],
-        client: {
-            name: "Neha Singh",
-            role: "HR Director",
-            testimonial: "The staff quarters were delivered quickly and have provided comfortable accommodation for our employees. The quality is excellent and maintenance has been minimal."
-        }
-    },
-    6: {
-        scale: "Community Project",
-        timeline: "4 Weeks",
-        category: "Public Installation",
-        points: [
-            "Outdoor fitness equipment installation",
-            "Public health promotion design",
-            "Durable weather-resistant materials",
-            "Community park integration",
-            "Safety-focused equipment selection",
-            "Easy public access design"
-        ],
-        client: {
-            name: "Arjun Mehta",
-            role: "Municipal Officer",
-            testimonial: "The open gym installation has been a huge success in our community park. Residents appreciate the quality equipment and the positive impact on public health."
-        }
-    },
-    7: {
-        scale: "Educational Campus",
-        timeline: "5 Weeks",
-        category: "Playground Equipment",
-        points: [
-            "Child-safe playway equipment",
-            "Educational activity integration",
-            "Safety-focused design standards",
-            "Durable & colorful materials",
-            "Social interaction promotion",
-            "Easy installation process"
-        ],
-        client: {
-            name: "Dr. Anjali Verma",
-            role: "School Principal",
-            testimonial: "The playway equipment has enhanced our school campus significantly. Children love it, and we appreciate the safety features and durable construction."
-        }
-    },
-    8: {
-        scale: "Commercial Building",
-        timeline: "9 Weeks",
-        category: "Prefab Commercial",
-        points: [
-            "Prefabricated commercial structure",
-            "Quick deployment capabilities",
-            "Flexible space utilization design",
-            "Durable construction materials",
-            "Cost-effective building solution",
-            "Modern architectural appearance"
-        ],
-        client: {
-            name: "Vikram Joshi",
-            role: "Business Owner",
-            testimonial: "Our commercial building was up and running in record time. The prefab approach saved us both time and money without compromising on quality."
-        }
-    },
-    9: {
-        scale: "Industrial Storage",
-        timeline: "7 Weeks",
-        timeline: "6 Weeks",
-        category: "Water Storage",
-        points: [
-            "Mild steel water storage tanks",
-            "Industrial capacity requirements",
-            "Strength & durability focus",
-            "Long-term performance design",
-            "Corrosion protection systems",
-            "Easy maintenance access"
-        ],
-        client: {
-            name: "Rohan Malhotra",
-            role: "Industrial Manager",
-            testimonial: "The water storage tanks have been working perfectly for our industrial needs. The fabrication quality is top-notch and they've required zero maintenance."
-        }
-    }
-};
+    const popup = document.getElementById("projectPopup");
+    const overlay = document.getElementById("projectPopupOverlay");
+    const closeBtn = document.getElementById("projectPopupClose");
 
-// Indian Names for Clients
-const indianNames = [
-    "Rohan Sharma", "Priya Patel", "Amit Singh", "Neha Gupta", 
-    "Rajesh Kumar", "Anjali Verma", "Vikram Joshi", "Sanjay Mehta",
-    "Arjun Reddy", "Deepika Nair", "Karan Malhotra", "Pooja Desai"
-];
+    const titleEl = document.getElementById("projectPopupTitle");
+    const locationEl = document.querySelector("#projectPopupLocation span");
+    const imageEl = document.getElementById("projectPopupImage");
+    const descEl = document.getElementById("projectPopupDescription");
 
-// DOM Elements
-let projectPopup;
-let typeInterval;
+    const scaleEl = document.getElementById("projectPopupScale");
+    const timelineEl = document.getElementById("projectPopupTimeline");
+    const categoryEl = document.getElementById("projectPopupCategory");
 
-// Initialize
-function initProjectPopup() {
-    projectPopup = document.getElementById('projectPopup');
-    if (!projectPopup) return;
-    
-    // Add click events
-    document.querySelectorAll('.view-project-summary').forEach(button => {
-        button.addEventListener('click', function(e) {
+    const keyPointsEl = document.getElementById("projectPopupKeyPoints");
+
+    const clientNameEl = document.getElementById("projectPopupClientName");
+    const clientRoleEl = document.getElementById("projectPopupClientRole");
+    const testimonialEl = document.getElementById("projectPopupTestimonial");
+
+    const prevBtn = popup.querySelector(".popup-prev");
+    const nextBtn = popup.querySelector(".popup-next");
+
+    let galleryImages = [];
+    let currentImageIndex = 0;
+
+    document.querySelectorAll(".view-project-summary").forEach(btn => {
+        btn.addEventListener("click", e => {
             e.preventDefault();
-            const card = this.closest('.project-card');
-            if (card) openProjectPopup(card);
+            const card = btn.closest(".project-card");
+            if (!card) return;
+            openPopupFromCard(card);
         });
     });
-    
-    setupProjectPopupControls();
-}
 
-// Open Popup
-function openProjectPopup(card) {
-    if (!projectPopup) return;
-    
-    // Stop typing
-    if (typeInterval) {
-        clearInterval(typeInterval);
-        typeInterval = null;
+    function openPopupFromCard(card) {
+
+        /* ---------- BASIC DATA ---------- */
+
+        titleEl.textContent = card.querySelector("h3")?.textContent || "";
+        locationEl.textContent =
+            card.querySelector(".fa-map-marker-alt")?.parentElement.textContent.trim() || "";
+        descEl.textContent =
+            card.querySelector(".project-content > p:nth-of-type(2)")?.textContent || "";
+
+        /* ---------- TAGS ---------- */
+
+        const tags = [...card.querySelectorAll(".project-tag")].map(t => t.textContent.trim());
+        keyPointsEl.innerHTML = "";
+        tags.forEach(tag => {
+            keyPointsEl.innerHTML += `
+                <div class="key-point">
+                    <i class="fas fa-check-circle"></i> ${tag}
+                </div>`;
+        });
+
+        scaleEl.textContent = tags.length >= 3 ? "Large" : "Medium";
+        timelineEl.textContent = "As per project scope";
+        categoryEl.textContent = tags[0] || "Project";
+
+        /* ---------- CLIENT DATA ---------- */
+
+        clientNameEl.textContent =
+            card.querySelector(".c-name")?.value || "Project Client";
+        clientRoleEl.textContent =
+            card.querySelector(".c-role")?.value || "Authorized Representative";
+        testimonialEl.textContent =
+            `"${card.querySelector(".c-testimonial")?.value || "Excellent project execution."}"`;
+
+        /* ---------- IMAGE GALLERY ---------- */
+
+        galleryImages = [...card.querySelectorAll(".project-img")].map(i => i.value);
+        currentImageIndex = 0;
+
+        setGalleryImage();
+
+        popup.classList.add("active");
+        document.body.style.overflow = "hidden";
     }
-    
-    // Extract data from card
-    const projectId = card.dataset.id;
-    const title = card.querySelector('h3')?.textContent || 'Project';
-    const location = card.querySelector('.fa-map-marker-alt')?.parentElement?.textContent?.trim() || '';
-    const image = card.querySelector('.project-image img')?.src || '';
-    const description = card.querySelector('.project-content p:nth-of-type(2)')?.textContent || '';
-    const tags = Array.from(card.querySelector('.project-tags')?.querySelectorAll('.project-tag') || [])
-        .map(tag => tag.textContent);
-    
-    // Get additional data
-    const data = projectData[projectId] || getDefaultData(tags);
-    
-    // Set basic content
-    document.getElementById('projectPopupTitle').textContent = title;
-    document.getElementById('projectPopupLocation').innerHTML = `<i class="fas fa-map-marker-alt"></i> ${location}`;
-    document.getElementById('projectPopupImage').src = image;
-    document.getElementById('projectPopupImage').alt = title;
-    document.getElementById('projectPopupScale').textContent = data.scale;
-    document.getElementById('projectPopupTimeline').textContent = data.timeline;
-    document.getElementById('projectPopupCategory').textContent = data.category;
-    
-    // Set client testimonial
-    const client = data.client || getRandomClient();
-    document.getElementById('projectPopupClientName').textContent = client.name;
-    document.getElementById('projectPopupClientRole').textContent = client.role;
-    document.getElementById('projectPopupTestimonial').textContent = `"${client.testimonial}"`;
-    
-    // Clear and setup typing
-    const descElement = document.getElementById('projectPopupDescription');
-    const cursor = document.querySelector('.project-typewriter-cursor');
-    descElement.textContent = '';
-    cursor.style.display = 'inline-block';
-    
-    // Create key points from tags and data
-    createKeyPoints(tags, data.points);
-    
-    // Show popup
-    projectPopup.classList.add('active');
-    document.body.style.overflow = 'hidden';
-    
-    // Start animations
-    setTimeout(() => {
-        startTyping(descElement, description, cursor);
-        animateDetails();
-    }, 400);
-}
 
-// Create key points
-function createKeyPoints(tags, additionalPoints) {
-    const container = document.getElementById('projectPopupKeyPoints');
-    container.innerHTML = '';
-    
-    // Combine tags and additional points
-    const allPoints = [...tags, ...(additionalPoints || [])];
-    
-    allPoints.slice(0, 6).forEach((point, index) => {
-        const pointItem = document.createElement('div');
-        pointItem.className = 'key-point-item';
-        pointItem.style.animationDelay = `${index * 0.1}s`;
-        
-        const icon = document.createElement('div');
-        icon.className = 'key-point-icon';
-        icon.innerHTML = '<i class="fas fa-check"></i>';
-        
-        const text = document.createElement('div');
-        text.className = 'key-point-text';
-        text.textContent = point;
-        
-        pointItem.appendChild(icon);
-        pointItem.appendChild(text);
-        container.appendChild(pointItem);
-    });
-}
-
-// Typewriter effect
-function startTyping(element, text, cursor) {
-    let i = 0;
-    element.textContent = '';
-    
-    typeInterval = setInterval(() => {
-        if (i < text.length) {
-            element.textContent += text.charAt(i);
-            i++;
-        } else {
-            clearInterval(typeInterval);
-            typeInterval = null;
-            cursor.style.display = 'none';
-        }
-    }, 20);
-}
-
-// Animate detail items
-function animateDetails() {
-    document.querySelectorAll('.detail-item').forEach((item, index) => {
-        item.style.animationDelay = `${index * 0.2}s`;
-        item.style.animationFillMode = 'forwards';
-    });
-}
-
-// Get random Indian client
-function getRandomClient() {
-    const randomName = indianNames[Math.floor(Math.random() * indianNames.length)];
-    const roles = ["Project Manager", "Operations Head", "Business Owner", "Plant Manager", "Director"];
-    const randomRole = roles[Math.floor(Math.random() * roles.length)];
-    
-    const testimonials = [
-        "Excellent work quality and timely delivery. Highly recommended!",
-        "Professional team that delivered beyond expectations.",
-        "Quality construction with attention to detail. Very satisfied!",
-        "Completed the project ahead of schedule. Great experience!",
-        "Reliable and trustworthy service provider. Will work with them again."
-    ];
-    const randomTestimonial = testimonials[Math.floor(Math.random() * testimonials.length)];
-    
-    return {
-        name: randomName,
-        role: randomRole,
-        testimonial: randomTestimonial
-    };
-}
-
-// Get default data based on tags
-function getDefaultData(tags) {
-    const tag = tags[0]?.toLowerCase() || 'industrial';
-    
-    const dataMap = {
-        'peb': { scale: "Large Scale", timeline: "12 Weeks", category: "PEB Construction" },
-        'prefab': { scale: "Medium Scale", timeline: "8 Weeks", category: "Prefab Construction" },
-        'industrial': { scale: "Industrial Scale", timeline: "10 Weeks", category: "Industrial Construction" },
-        'tank': { scale: "Storage System", timeline: "6 Weeks", category: "Tank Fabrication" },
-        'factory': { scale: "Factory Scale", timeline: "14 Weeks", category: "Industrial Shed" },
-        'residential': { scale: "Residential Complex", timeline: "10 Weeks", category: "Housing" },
-        'commercial': { scale: "Commercial Building", timeline: "9 Weeks", category: "Commercial Construction" },
-        'public': { scale: "Public Project", timeline: "5 Weeks", category: "Public Installation" }
-    };
-    
-    return dataMap[tag] || { 
-        scale: "Standard Scale", 
-        timeline: "8-12 Weeks", 
-        category: "Construction Project" 
-    };
-}
-
-// Setup controls
-function setupProjectPopupControls() {
-    const closeBtn = document.getElementById('projectPopupClose');
-    const overlay = document.getElementById('projectPopupOverlay');
-    
-    if (closeBtn) closeBtn.addEventListener('click', closeProjectPopup);
-    if (overlay) overlay.addEventListener('click', closeProjectPopup);
-    
-    document.addEventListener('keydown', (e) => {
-        if (projectPopup?.classList.contains('active') && e.key === 'Escape') {
-            closeProjectPopup();
-        }
-    });
-}
-
-// Close popup
-function closeProjectPopup() {
-    if (!projectPopup) return;
-    
-    if (typeInterval) {
-        clearInterval(typeInterval);
-        typeInterval = null;
+    function setGalleryImage() {
+        if (!galleryImages.length) return;
+        imageEl.src = galleryImages[currentImageIndex];
+        imageEl.alt = titleEl.textContent;
     }
-    
-    projectPopup.classList.remove('active');
-    document.body.style.overflow = 'auto';
-}
 
-// Initialize
-document.addEventListener('DOMContentLoaded', initProjectPopup);
+    prevBtn.addEventListener("click", () => {
+        if (!galleryImages.length) return;
+        currentImageIndex =
+            (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+        setGalleryImage();
+    });
+
+    nextBtn.addEventListener("click", () => {
+        if (!galleryImages.length) return;
+        currentImageIndex =
+            (currentImageIndex + 1) % galleryImages.length;
+        setGalleryImage();
+    });
+
+    function closePopup() {
+        popup.classList.remove("active");
+        document.body.style.overflow = "";
+        galleryImages = [];
+    }
+
+    closeBtn.addEventListener("click", closePopup);
+    overlay.addEventListener("click", closePopup);
+
+    document.addEventListener("keydown", e => {
+        if (!popup.classList.contains("active")) return;
+        if (e.key === "Escape") closePopup();
+        if (e.key === "ArrowLeft") prevBtn.click();
+        if (e.key === "ArrowRight") nextBtn.click();
+    });
+
+    window.closeProjectPopup = closePopup;
+});
+
