@@ -883,6 +883,11 @@ span.separator-mb {
 }
 
 /* cta */
+section#cta {
+    background: var(--gradient-accent); 
+    margin-bottom: 50px;
+}
+
 .btn.btn-get-started {
     background: #fff;
     color: var(--color-accent);
