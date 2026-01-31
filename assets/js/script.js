@@ -3,18 +3,34 @@
 // ============================================
 
 document.addEventListener("DOMContentLoaded", () => {
-    const banners = document.querySelectorAll(".banner");
+    const fullbanners = document.querySelectorAll(".full-banner");
 
-    if (!banners.length) {
+    if (!fullbanners.length) {
         return;
     }
 
     let index = 0;
 
     setInterval(() => {
-        banners[index].classList.remove("active");
-        index = (index + 1) % banners.length;
-        banners[index].classList.add("active");
+        fullbanners[index].classList.remove("active");
+        index = (index + 1) % fullbanners.length;
+        fullbanners[index].classList.add("active");
+    }, 4000);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const mbbanners = document.querySelectorAll(".mb-banner");
+
+    if (!mbbanners.length) {
+        return;
+    }
+
+    let index = 0;
+
+    setInterval(() => {
+        mbbanners[index].classList.remove("active");
+        index = (index + 1) % mbbanners.length;
+        mbbanners[index].classList.add("active");
     }, 4000);
 });
 
@@ -812,9 +828,13 @@ document.addEventListener('DOMContentLoaded', () => {
 // ============================================
 // PROJECT POPUP WITH ENHANCED DATA
 // ============================================
+
 document.addEventListener("DOMContentLoaded", () => {
 
     const popup = document.getElementById("projectPopup");
+
+    if(!popup) return;
+
     const overlay = document.getElementById("projectPopupOverlay");
     const closeBtn = document.getElementById("projectPopupClose");
 
