@@ -1406,6 +1406,9 @@ footer {
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    .projects-grid.home-projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
     .contact-container {
         grid-template-columns: 1fr 1fr;
@@ -1448,6 +1451,9 @@ footer {
 
     .projects-grid {
         grid-template-columns: repeat(3, 1fr);
+    }
+    .projects-grid.home-projects {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .footer-grid {
