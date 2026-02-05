@@ -699,6 +699,9 @@ span.separator-mb {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
 }
+#gallery .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
 
 .gallery-item {
     position: relative;
@@ -1322,6 +1325,10 @@ footer {
         grid-template-columns: repeat(3, 1fr);
     }
 
+    #gallery .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
     .hero-stats {
         justify-content: space-around;
     }
@@ -1354,6 +1361,10 @@ footer {
     }
 
     .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #gallery .gallery-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 
@@ -1421,6 +1432,10 @@ footer {
     .nav-list {
         gap: 1.7rem;
     }
+
+    #gallery .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
     
     .contact-info.hm-page {
         display: block;
@@ -1456,6 +1471,10 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    #gallery .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
     .footer-grid {
         grid-template-columns: repeat(4, 1fr);
     }
@@ -1503,6 +1522,10 @@ footer {
 
     .contact-info.hm-page {
         display: flex;
+    }
+
+    #gallery .gallery-grid {
+        grid-template-columns: repeat(5, 1fr);
     }
 
     .hero-trust {
